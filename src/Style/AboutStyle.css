@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.AboutContainer{
+    
+    /* height: 100vh; */
+    width: 100%;
+    position: relative;
+    margin: 70px 0;
+    z-index: 2;
+    
+}
+
+.Before_Design{
+    position: absolute;
+    /* display: block; */
+    font-size: 22rem;
+    font-weight:bold;
+    width: 100%;
+    z-index: 0;
+    color: rgb(0 0 0 / 5%);
+    cursor:default;
+}
+
+#MeB{
+    text-align: right;
+    bottom: 0;
+    /* text-align: ; */
+    /* position: absolute; */
+
+}
+#AboutB{
+   text-align: left;
+   top: 0;
+}
+.AboutHeading{
+    display: block;
+    text-align: center;
+    position: relative;
+    font-size: 4.5rem;
+    font-family: 'Kanit';
+    color: #71ff32;
+  
+    
+}
+
+.BoxContainer{
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: row; */
+    /* height: 100vh; */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.aboutText{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+    /* min-width: 50%; */
+    /* height: 100%; */
+    padding: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.17rem;
+}
+
+.text1{
+    
+    float: left;
+}
+
+.Skilleffect{
+
+    width: 50%;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.effectContainer{
+    height: 60%;
+    width: 80%;
+    margin: 140px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+/* .effectContainer li{
+    scale: 0;
+} */
+
+
+.center{
+    font-size: 7rem;
+    color: #4e6796;
+}
+.AboutSkills{
+    position: absolute;
+    list-style: none;
+    
+    font-size: 3.3rem;
+    /* transform-origin: -200px; */
+    transition-duration: 1s; 
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out; 
+    
+}
+
+:root{
+    --iconDist : 150px;
+}
+
+.html{
+    /* transform: rotate(0deg) scale(1); */
+    transform: translate(var(--iconDist), var(--iconDist));
+    
+}
+
+.css{
+    
+    /* transform: rotate(-60deg) scale(1); */
+    transform: translate(calc(var(--iconDist)*-1),var(--iconDist));
+    
+}
+.js{
+    
+    /* transform: rotate(-120deg) scale(1); */
+    transform: translate(var(--iconDist),calc(var(--iconDist)*-1));
+    
+}
+.react{
+    /* transform: rotate(-180deg) scale(1); */
+    transform: translate(calc(var(--iconDist)*-1),calc(var(--iconDist)*-1));
+    
+    
+}
+
+.InVisiable{
+    /* transform:translateY(100px); */
+    transform: translate(0 ,0) scale(0) rotate(360deg);
+    /* color: red; */
+}
+
+.AbtText{
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease-out;
+    transform: translateY(33%);
+    line-height: 1.7;
+    font-size: 1.4rem;
+
+
+}
+.AbtText img{
+    height: 35rem;
+    float: left;
+    margin: 0 30px;
+}
+
+.Visiable{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+
+@media screen and (max-width: 530px){
+    :root{
+        --iconDist:25vw;
+    }
+    .AboutHeading{
+        font-size: 15vw;
+    }
+    .AboutSkills{
+        font-size: 10vw;
+    }
+    .center{
+        font-size: 20vw;
+    }
+
+    .AbtText img{
+        display: block;
+        float: none;
+        margin: 30px auto;
+        height: 79vw;
+       
+    }
+}
+
+@media screen and (max-width: 1070px) and (min-width:530px){
+    
+    .Before_Design{
+        font-size: 33vw;
+        text-align: center;
+    }
+    #MeB{
+        
+        text-align: center;
+    }
+    .AbtText img{
+        height: 55vw;
+       
+    }
+    
+}

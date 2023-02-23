@@ -1,0 +1,196 @@
+.Icon {
+    position: absolute;
+    font-size: 50px;
+    color: #000000;
+    opacity: 0.5;
+    cursor: pointer;
+    
+    z-index: 10;
+}
+
+.Icon:hover {
+    opacity: 1
+}
+
+#Icon1 {
+
+    /* top: 160px; */
+    top: 18%;
+    
+    
+    /* right: 400px; */
+    right: 14%;
+    animation: TopDown infinite 2.5s ease-in-out, Rotate infinite 2s linear;
+    /* animation: Circular infinite 4s linear; */
+    color: #209ece;
+}
+
+#Icon2 {
+    /* top: 400px; */
+    top: 73%;
+    /* left: 1000px; */
+    /* right: 150px; */
+    right: 10%;
+    animation: Circular infinite 4s linear;
+    color: #f42626;
+}
+
+#Icon3 {
+    /* top: 450px; */
+    top: 81%;
+    /* left: 350px; */
+    left: 23%;
+    animation: RotateY infinite 1.2s linear, LeftRight infinite 4s ease-in-out;
+    color: #0000ff;
+}
+
+#Icon4 {
+    /* top: 150px; */
+    top: 27%;
+    /* left: 140px; */
+    left: 9%;
+    animation: CircularP infinite 5s linear;
+}
+
+#Icon5 {
+    /* font-size: 45px; */
+    /* top: 380px; */
+    top: 69%;
+    /* left: 180px; */
+    left: 12%;
+    animation: TopDownJs infinite 1.5s ease-in-out;
+    color: #074502;
+}
+
+#Icon6 {
+    /* right: 440px; */
+    right: 29%;
+    /* top: 480px; */
+    top: 87%;
+    animation: Rotate infinite 2.5s linear, LeftRightGithub infinite 2s ease-in-out;
+}
+
+#Icon7 {
+    /* top: 50px; */
+    top: 9%;
+    /* left: 500px; */
+    left: 33%;
+    color: rgb(189, 0, 0);
+    animation: RotateX infinite 1s linear, LeftRightA infinite 2.5s ease-in-out;
+
+}
+
+/*React*/
+@keyframes TopDown {
+    
+    50% {
+        top:33%;
+    }
+
+    100% {
+        top:18% ;
+    }
+}
+
+/*JS animation */
+@keyframes TopDownJs {
+    50% {
+        top: 58%;
+    }
+
+    100% {
+        top: 69%;
+    }
+}
+
+/*Html*/
+@keyframes LeftRight {
+    50% {
+        left: 35%;
+    }
+
+    100% {
+        left: 23%;
+
+    }
+}
+
+/*React Github*/
+@keyframes Rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*Html*/
+@keyframes RotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/*Angular*/
+@keyframes RotateX {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+/*Angular*/
+@keyframes LeftRightA {
+    50% {
+        left: 45%;
+    }
+
+    100% {
+        left: 33%;
+
+    }
+}
+
+/*Css*/
+@keyframes Circular {
+    0% {
+        transform: rotate(0deg) translateX(40px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(40px) rotate(-360deg);
+    }
+}
+
+
+/*Python*/
+@keyframes CircularP {
+    0% {
+        transform: rotate(0deg) translateX(40px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(40px);
+    }
+}
+
+/*Github*/
+@keyframes LeftRightGithub {
+    50% {
+        right: 35%;
+    }
+
+    100% {
+        right: 29%;
+
+    }
+}

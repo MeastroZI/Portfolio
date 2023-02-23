@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Heading{
+   
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 4.5rem;
+    text-align: center;
+    margin: auto;
+    font-family: 'Kanit';
+    color: #71ff32;
+    
+    cursor: pointer;
+    
+
+}
+.text{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    /* display: block; */
+    /* margin: auto; */
+    /* margin-top: 30px; */
+    font-size: 1.2rem;
+    font-family: 'Sarabun';
+    color: rgb(26 52 52);
+    letter-spacing: 0.1rem;
+}
+.PrContainer{
+    position: relative;
+    box-sizing: border-box;
+    display: grid;
+    padding: 0 30px;
+    /* height: 100vh; */
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    grid-template-columns: repeat(
+                auto-fit, minmax(350px, 1fr));
+    /* grid-template-rows: repeat(2,320px); */
+    /* column-gap: 100px; */
+    gap: 30px;
+    /* margin: 0 50px; */
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+    /* overflow: hidden; */
+    /* margin: 50px auto; */    
+    
+}
+.projects{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 320px;
+    /* width: 450px; */
+
+    width: 100%;
+    /* color: cornsilk; */
+    /* background-color: white; */
+    background: rgba(255, 255, 255,0.5);
+    /* opacity: 0.5; */
+    transition-duration: 0.5s;
+    box-shadow: 0px 0 10px #00000075;
+    
+    
+}
+
+.projectsActive{
+    transform: scale(1.1);
+    /* scale: 1.1; */
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.881);
+    box-shadow: 0 0 20px rgb(255, 252, 252);
+}
+
+
+.preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 204, 255, 0.259);
+    color: #ffffff;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.7s;
+    z-index: 2;
+    font-family: 'Kanit';
+    
+}
+.preview:hover{
+
+    background-color: rgb(2, 196, 255);
+    box-shadow: 0 0 20px rgb(4, 195, 253);
+    /* transition-duration: 0.7s;
+    transform: rotate(360deg) ; */
+}
+.previewActive{
+    transition-duration: 0.7s;
+    transform: rotate(360deg) ;
+    /* background-color: rgb(2, 196, 255);
+    box-shadow: 0 0 20px rgb(4, 195, 253); */
+}
+.list{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    background-color: #01061099;
+    border-radius: 50%;
+    list-style: none;
+    /* transition: 0.2s; */
+    z-index: 1;
+    transition-duration: 0.7s;
+    
+}
+.Linktext{
+    position: absolute;
+    opacity: 0;
+    transition-duration: 0.5s;
+    font-size: 1rem;
+    left: 16px;
+    top: -20px;
+    color: rgb(101, 64, 181);
+}
+.LinktextActive{
+    
+    opacity: 1;
+    animation: TextView 0.5s forwards ease-in-out;
+}
+.list:hover{
+    
+    background-color: #010610;
+    
+
+}
+
+
+.list a{
+    position: relative;
+    display: flex;
+    color: #00aaff;
+    font-size: 1.5rem;
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.7s;
+    transition-delay: 0.2s;
+    
+}
+
+
+.ViewActive{
+    opacity: 1;
+    /* display: block; */
+    transition-duration: 0.7s;
+    transform-origin: center;
+    transform:translateX(-70px) translateY(-70px) rotate(360deg);
+    /* animation: animation1 0.7s forwards ease-in-out; */
+}
+.ViewDeActive{
+    opacity: 0;
+    display: block;
+    transition-duration: 0.7s;
+    transform:translateX(0px) translateY(0px) rotate(0deg);
+    /* animation: animation1R 0.7s  forwards ease-in-out ; */
+}
+
+.GithubActive{
+    opacity: 1;
+    display: block;
+    transition-duration: 0.7s;
+    transform: translateX(70px) translateY(-70px) rotate(360deg);
+    /* animation: animation2 0.7s forwards ease-in-out; */
+}
+
+.GithubDeActive{
+    opacity: 0;
+    display: block;
+    /* animation: animation2R 0.7s forwards ease-in-out; */
+    transition-duration: 0.7s;
+    transform:translateX(0px) translateY(0px) rotate(0deg);
+}
+
+
+@keyframes animation1{
+    from{
+        /* left:195px;
+        top: 130px; */
+        transform:rotate(0deg) translateX(30px) translateY(30px);
+    }
+    to{
+        top: 40px;
+        left: 130px;
+        transform:rotate(360deg) ;
+    }
+}
+
+@keyframes animation1R{
+    from{
+        top: 40px;
+        left: 130px;
+        transform:rotate(360deg) ;
+    }
+    to{
+        left:195px;
+        top: 130px;
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes animation2{
+    from{
+        left:195px;
+        top: 130px;
+        transform:rotate(0deg);
+    }
+    to{
+        top: 40px;
+        left: 260px;
+        transform:rotate(360deg) ;
+    }
+}
+@keyframes animation2R{
+    from{
+        top: 40px;
+        left: 260px;
+        transform:rotate(360deg) ;
+    }
+    to{
+        left:195px;
+        top: 130px;
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes TextView{
+    from{
+        transform: scale(0);
+        transform: translateY(20px);
+        
+    }
+    to{
+        
+        
+        transform: scale(1);
+        transform: translateY(0px);
+    }
+}
+
+
+/* where am i  ---->  I Change the size of the links now i am going to find the align top and left property for the links */
+
+@media screen and (max-width: 500px)
+{
+    .PrContainer{
+        
+        grid-template-columns: repeat(
+                auto-fit, minmax(203px, 1fr));
+    }
+    .projects{
+        height: 60vw;
+    }
+    .Heading{
+        font-size: 15vw;
+    }
+    .text{
+        font-size: 4vw;
+    }
+    .preview{
+        height: 20vw;
+        width: 20vw;
+        font-size: 3vw;
+    }
+
+}
+

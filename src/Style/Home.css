@@ -1,0 +1,182 @@
+.TextContainer{
+    /* position: relative; */
+    top: 0px;
+    /* height: 77vh; */
+    height: 550px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    /* text-align: center; */
+    box-shadow: 0 0 20px black;
+
+}
+
+
+
+.Text{
+    
+    font-family: "Sarabun";
+    top: 150px;
+    /* transition-delay: 0.3s; */
+    transition-duration: 1s ;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    z-index: 20;
+}
+.Text1{
+    
+    width: 100%;
+    cursor: pointer;
+    color: rgb(26 52 52);
+    font-size: 1.2rem;
+    font-family: "Sarabun";
+    letter-spacing: 0.2rem;
+    opacity: 0;
+    transition-delay: 0.2s;
+    
+    transform: translateX(-45%);
+    
+}
+.Name{
+    font-size: 5rem;
+    /* font-size: 12vw; */
+    text-transform: uppercase;
+    font-family: "Fredoka One";
+    font-weight: 100;
+    cursor: pointer;
+    transition-delay: 1s;
+    transform:translateY(40%);
+    letter-spacing: 1rem;
+    
+    
+}
+.Name:hover{
+    transition-delay: 0s;
+    transform: scale(1.05);
+}
+
+.Skills{
+    font-size: 1.2rem;
+    font-family: 'Amiri';
+    color: rgb(94, 102, 104);
+    letter-spacing: 0.1rem;
+    width: 100%;
+    
+}
+
+.Logo{
+    display: inline;
+    /* position: relative; */
+    font-family: "Fredoka One";
+    font-size: 8rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, rgb(29 255 59), #342abc,orange);
+    
+    
+    
+}
+
+.Logo:hover{
+    transform: rotate(60deg);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Visiable{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+
+
+@media screen and (max-width: 590px){
+    .Name{
+        font-size: 13vw;
+    }
+    .Skills{
+        font-size: 4.4vw;
+    }
+    .Text1{
+        font-size: 5vw;
+    }
+    .Icon{
+        opacity: 0.5;
+        font-size: 10vw;
+    }
+    .Logo{
+        font-size: 24.3vw;
+    }
+    
+}
+
+
+
+
+
+
+/* Navbar and about media query*/
+@media screen and (max-width: 940px){
+    .NavContainer{
+        
+        justify-content: space-between;
+        min-height: 40px;
+    }
+    .Hembarger{
+        scale: 1;
+        transition-duration: 0.5s;
+    }
+    
+    .HembarRotate90deg{
+        transform: rotate(90deg);
+    }
+    .NavList{
+        position: absolute;
+        flex-direction: column;
+        gap: 9vh;
+        transform: translateX(100%) scaleX(0);
+        top: 0;
+        right: 0;
+       
+        height: 100%;
+        width: 30%;
+        background-color: #000000c9;
+    }
+    .NavbarVisiable{
+      
+        
+        transform:translateX(0%) scaleX(1);
+    }
+
+    .BoxContainer{
+        flex-direction:column;
+        /* background-color: red; */
+    }
+    
+    .aboutText{
+        min-width: 90%;
+        /* background-color: red; */
+        padding: 40px;
+    }
+
+    
+}
+
+
+
+

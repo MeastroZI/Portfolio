@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --c: black;
+    --A: aqua;
+    font-family: "Sarabun";
+}
+
+.Container {
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    background: linear-gradient(45deg, #623ff0, #dd1c1c4f);
+    box-shadow: 0 0 10px;
+    margin: 50px 0;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 4.5rem;
+    font-family: 'Kanit';
+    color: #71ff32;
+
+    grid-column: span 2;
+
+}
+
+.ContactText {
+    position: relative;
+    cursor: pointer;
+    margin: 20px 20px;
+    color: rgb(26 52 52);
+    font-size: 1rem;
+    font-family: "Sarabun";
+    letter-spacing: 0.1rem;
+    grid-column: span 2;
+    float: left;
+
+}
+
+.formCont {
+    position: relative;
+
+    justify-content: center;
+
+
+}
+
+.formCont ul {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, minmax(100px,270px));
+    margin: 0 32px;
+    list-style: none;
+    gap: 19px;
+
+
+}
+
+.formCont ul li {
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+ 
+    z-index: 50;
+
+    display: block;
+    position: relative;
+
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.Lis:nth-child(1) {
+    grid-column: span 0.5;
+}
+
+
+.Lis::before {
+
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 20px;
+
+    border-left: 3px solid var(--A);
+    border-top: 3px solid var(--A);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.Lis:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.FormText {
+    list-style: none;
+    border: none;
+    position: relative;
+    height: 3.5rem;
+    width: 100%;
+    transition-duration: 0.5s;
+    top: 50px;
+    background-color: rgba(255, 255, 255, 0.392);
+    box-sizing: border-box;
+    outline: none;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    z-index: 51;
+    font-family: "Sarabun";
+    font-weight: 200;
+    font-size: 1rem;
+    letter-spacing: 0.07rem;
+
+    
+
+
+}
+
+#name {
+    display: inline;
+}
+
+
+#name input {
+    top: 0;
+    left: 0;
+    transition-duration: 0.5s;
+}
+
+
+
+
+input::placeholder {
+    color: var(--c);
+    font-family: "Sarabun";
+    letter-spacing: 0.1rem;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#Email {
+
+    grid-column: span 2;
+
+
+
+}
+
+#Email input {
+
+    top: 0;
+    left: 0;
+
+}
+
+
+
+#Number {
+
+    display: block;
+
+
+}
+
+#Number input {
+    top: 0;
+    left: 0;
+}
+
+#Message {
+
+    grid-column: span 2;
+
+}
+
+#Message textarea {
+    top: 0;
+
+    left: 0;
+
+    height: 8rem;
+    resize: none;
+}
+
+#Message textarea::placeholder {
+    color: var(--c);
+    font-family: "Sarabun";
+    letter-spacing: 0.1rem;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#Submit {
+    position: relative;
+
+    grid-column: span 2;
+}
+
+#Submit button {
+
+    position: relative;
+    margin: 10px 5px;
+    height: 3.4rem;
+    width: 14rem;
+    color: var(--A);
+    font-family: "Sarabun";
+    letter-spacing: 0.1rem;
+    background-color: #6fff3200;
+    transition-duration: 0.5s;
+    border: 2px solid var(--A);
+    z-index: 0;
+    opacity: 1;
+    transition-timing-function: cubic-bezier(0.1, 0.2, 0.4, 0.5);
+}
+
+#Submit button::before {
+    position: absolute;
+
+    content: " ";
+    background-color: var(--A);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+
+    transition-duration: 0.5s;
+    transform-origin: 0 0;
+    z-index: -1;
+
+    transition-timing-function:
+        cubic-bezier(0.5, 1.6, 0.5, 0.7);
+
+}
+
+#Submit button:hover::before {
+
+    transform: scaleX(1);
+
+}
+
+#Submit button:hover {
+    color: black;
+}
+
+.Map {
+    position: relative;
+
+    border: 8px solid black;
+}
+
+.popUpEffect {
+
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.follow_me{
+    font-size: 2rem;
+
+    grid-column: span 2;
+    height: 70px;
+}
+.follow_me a{
+    padding: 10px;
+    color: #d4bc7c99;
+}
+.errorMsg{
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    position: absolute;
+    bottom: 12px;
+    /* text-align: center; */
+    right: 0;
+    color: rgb(0, 0, 0);
+    transition-duration: 0.5s ;
+    z-index: 71;
+    font-family: "Sarabun";
+    transform: translateX(300px);
+    
+
+}
+
+
+@media screen and (max-width: 500px){
+    #name{
+        grid-column: span 2
+
+    }
+    #Submit button{
+        width: 60vw;
+        /* height: 2.5rem; */
+    }
+    .heading {
+        font-size: 15vw;
+    }
+    #Number{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .Container{
+        /* background-color: red; */
+        flex-direction: column;
+    }
+    .Map {
+        width: 100vw;
+    }
+}
