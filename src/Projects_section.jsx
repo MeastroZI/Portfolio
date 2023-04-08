@@ -3,6 +3,8 @@ import './Style/Project.css'
 import Footer from './Components/Footer'
 import elementObserver from './ElementObserver'
 import { useRef,useEffect  } from 'react'
+import Proj1 from './img/myProj1.png'
+import img from './img/myIMG.png'
 
 function Project() {
 
@@ -42,20 +44,22 @@ function Project() {
 
     //****************Projects Hover Effect***************** */
     function handleHover(e){
-        // console.log(e)
-        document.querySelectorAll(".projects").forEach((elem)=>{
+        console.log(e.currentTarget)
+        console.log(e.currentTarget.querySelector('.ProjectsImg'))
+        document.querySelectorAll(".Projects").forEach((elem)=>{
             DeActiveElm(elem)
         })
         
-        e.target.classList.add(e.target.className+"Active")
+        e.currentTarget.querySelector(".ProjectsImg").classList.add("projectsActive")
     }
     //***************projects Leave(Unhover) Effect***********  */
     function handleMouseLeave(e) {
-        DeActiveElm(e.target) //call the Deactive function which Deactive All the effect(ViewButton,view, & github effects) under the project on Unhover(leave)
+        // console.log(e.target.parentNode)
+        DeActiveElm(e.currentTarget) //call the Deactive function which Deactive All the effect(ViewButton,view, & github effects) under the project on Unhover(leave)
     }
     /***************Deactive Function which Deactive all effect which are under the projects**************  */
     function DeActiveElm(elm){
-        elm.classList.remove("projectsActive")
+        elm.querySelector(".ProjectsImg").classList.remove("projectsActive")
         elm.querySelector(".preview").classList.remove('previewActive')
         elm.querySelectorAll('.list').forEach((elm) => {
             elm.classList.remove(elm.id + "Active")
@@ -81,7 +85,24 @@ function Project() {
             <span className='Heading'>Projects</span>
             <span className="text">This is some few resent Projects of mine</span>
             <div className="PrContainer" id='Project'>
-                <div className="projects"  index={1} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover} >
+                <div className="projects"     index={1} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover} >
+                    <img src={Proj1} className='ProjectsImg' id="prj1" alt="" /> 
+                    <div className="preview" onClick={handleClick}>View</div>
+
+                    <li className='list'id='View' >
+                        <span className='Linktext'> Site</span>
+                        <a href="https://chata.netlify.app" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove} target="_blank"><i className="fa-solid fa-eye"></i>
+                        </a>
+
+                    </li>
+                    <li className='list' id='Github' >
+                        <span className='Linktext'>Code</span>
+                        <a href="#" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove} target="_blank"><i className="fa-brands fa-github"></i>
+                        </a>
+
+                    </li>
+                </div>
+                <div className="projects" index={2} id="prj2"  >
                     <div className="preview" onClick={handleClick}>View</div>
 
                     <li className='list'id='View' >
@@ -97,7 +118,7 @@ function Project() {
 
                     </li>
                 </div>
-                <div className="projects" index={2} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover} >
+                <div className="projects"  index={3} id="prj3" >
                     <div className="preview" onClick={handleClick}>View</div>
 
                     <li className='list'id='View' >
@@ -113,7 +134,7 @@ function Project() {
 
                     </li>
                 </div>
-                <div className="projects"  index={3} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover}>
+                {/* <div className="projects"  index={4} id="prj4" >
                     <div className="preview" onClick={handleClick}>View</div>
 
                     <li className='list'id='View' >
@@ -129,7 +150,7 @@ function Project() {
 
                     </li>
                 </div>
-                <div className="projects"  index={4} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover}>
+                <div className="projects"  index={5} id="prj5" >
                     <div className="preview" onClick={handleClick}>View</div>
 
                     <li className='list'id='View' >
@@ -145,7 +166,7 @@ function Project() {
 
                     </li>
                 </div>
-                <div className="projects"  index={5} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover}>
+                <div className="projects"  index={6} id="prj6" >
                     <div className="preview" onClick={handleClick}>View</div>
 
                     <li className='list'id='View' >
@@ -161,23 +182,7 @@ function Project() {
 
                     </li>
                 </div>
-                <div className="projects"  index={6} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover}>
-                    <div className="preview" onClick={handleClick}>View</div>
-
-                    <li className='list'id='View' >
-                        <span className='Linktext'> Site</span>
-                        <a href="#" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove}><i className="fa-solid fa-eye"></i>
-                        </a>
-
-                    </li>
-                    <li className='list' id='Github' >
-                        <span className='Linktext'>Code</span>
-                        <a href="#" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove}><i className="fa-brands fa-github"></i>
-                        </a>
-
-                    </li>
-                </div>
-                
+                 */}
 
 
 

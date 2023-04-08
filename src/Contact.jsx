@@ -36,7 +36,7 @@ function Contact(){
         console.log(FormState.name)
         if (FormState.name==""|| FormState.Email=="" || FormState.Message == "") {
 
-            ErrorMsg("Pleas fill the require filleds",false)
+            ErrorMsg("Please fill the require filleds",false)
             
             return
         }
