@@ -6,6 +6,8 @@ const elementObserver=(Target)=> {
     const [isVisible,setVisibe]=useState(false)
     
     const options = useMemo(()=>{
+
+        
         return{
             root:null,
             rootMargin:'0px',
