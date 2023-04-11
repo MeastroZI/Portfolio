@@ -1,7 +1,7 @@
 import React from 'react';
 import  "./Style/AboutStyle.css";
 
-import elementObserver from './ElementObserver';
+import elementObserver from './ElementObservers';
 // import styled from 'styled-components';
 import { useRef ,useEffect} from 'react';
 import img from './img/myIMG.png'

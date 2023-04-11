@@ -10,7 +10,7 @@ import Contact from './Contact';
 import About from './About';
 import Footer from './Components/Footer';
 import { useEffect, useRef ,useState,useMemo} from 'react';
-import elementObserver from './elementObserver';
+import elementObserver from './ElementObservers';
 import GotoTop from './Components/GotoTop';
 
 
