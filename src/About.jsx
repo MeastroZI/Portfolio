@@ -1,6 +1,6 @@
 import React from 'react';
 import  "./Style/AboutStyle.css";
-import CustomProperties from 'react-custom-properties';
+
 import elementObserver from './ElementObserver';
 // import styled from 'styled-components';
 import { useRef ,useEffect} from 'react';
