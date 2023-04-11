@@ -1,7 +1,7 @@
 
 import { useRef,useEffect,useState } from 'react'
 import  './Style/ContactStyle.css'
-import elementObserver from './ElementObservers';
+import elementObserver from './ElementObserver';
 import Submite from './Submite_Form';
 
 
