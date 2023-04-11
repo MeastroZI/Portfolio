@@ -1,7 +1,6 @@
 import React from 'react'
 import './Style/Project.css'
 import Footer from './Components/Footer'
-import elementObserver from './ElementObserver'
 import { useRef,useEffect  } from 'react'
 import Proj1 from './img/myProj1.png'
 import img from './img/myIMG.png'
