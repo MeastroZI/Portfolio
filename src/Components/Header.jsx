@@ -69,7 +69,7 @@ function Header() {
 
             
                 
-            <i class="fa-solid fa-bars test Hembarger" onClick={HandleClick}></i>
+            <i className="fa-solid fa-bars test Hembarger" onClick={HandleClick}></i>
             
 
             

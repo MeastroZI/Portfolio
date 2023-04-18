@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.Heading{
-   
+.Heading {
+
     position: relative;
     display: block;
     width: 100%;
@@ -13,12 +13,13 @@
     margin: auto;
     font-family: 'Kanit';
     color: #71ff32;
-    
+
     cursor: pointer;
-    
+
 
 }
-.text{
+
+.text {
     position: relative;
     cursor: pointer;
     width: 100%;
@@ -31,7 +32,8 @@
     color: rgb(26 52 52);
     letter-spacing: 0.1rem;
 }
-.PrContainer{
+
+.PrContainer {
     position: relative;
     box-sizing: border-box;
     display: grid;
@@ -40,8 +42,7 @@
     width: 100%;
     /* border: 2px solid red; */
     margin-top: 20px;
-    grid-template-columns: repeat(
-                auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     /* grid-template-rows: repeat(2,320px); */
     /* column-gap: 100px; */
     gap: 30px;
@@ -50,10 +51,11 @@
     justify-items: center;
     margin-top: 50px;
     /* overflow: hidden; */
-    /* margin: 50px auto; */    
-    
+    /* margin: 50px auto; */
+
 }
-.projects{
+
+.projects {
     position: relative;
     display: flex;
     justify-content: center;
@@ -61,20 +63,73 @@
     align-items: center;
     height: 320px;
     /* width: 450px; */
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     /* color: cornsilk; */
     /* background-color: white; */
-    background: rgba(255, 255, 255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     /* opacity: 0.5; */
-    
+
     transition-duration: 0.5s;
     box-shadow: 0px 0 10px #00000075;
+
+}
+
+.AboutProject {
+
+
+    height: 63%;
+    width: 80%;
+    /* filter: blur(1px); */
+    background-color: rgba(107, 107, 107, 0.238);
+    border-radius: 7px;
+    position: absolute;
+    opacity: 0;
+    bottom: 69.5%;
+    color: rgb(255, 255, 255);
+    animation-duration: 0.5s;
+    letter-spacing: 0.05rem;
+    box-shadow: 0 0 10px rgb(255 255 255);
+    /* opacity: 1;
+    z-index: 55; */
+}
+
+/* .AboutProject:hover{
+    opacity: 1;
+    animation: flip-2-hor-top-fwd 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    
+    
+} */
+
+.AboutProjectText {
+    transform: rotateX(180deg);
+    transition-duration: 0.5s;
+    height: 100%;
+    width: 77%;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    /* align-items: center; */
+    justify-content: center;
+    /* padding: 50px; */
+    /* margin: 20px; */
+    margin: auto;
     
 }
 
-.projectsActive{
-    transform: scale(1.3);
+.FlipForward {
+    opacity: 1;
+    animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+.FlipBackward {
+    opacity: 1;
+    animation: flip-2-hor-top-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+
+.projectsActive {
+    transform: scale(1.1);
     /* scale: 1.1; */
     /* opacity: 1; */
     /* background: rgba(255, 255, 255, 0.881);
@@ -82,7 +137,7 @@
 }
 
 
-.preview{
+.preview {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,22 +151,25 @@
     transition-duration: 0.7s;
     z-index: 2;
     font-family: 'Kanit';
-    
+
 }
-.preview:hover{
+
+.preview:hover {
 
     background-color: rgb(2, 196, 255);
     box-shadow: 0 0 20px rgb(4, 195, 253);
     /* transition-duration: 0.7s;
     transform: rotate(360deg) ; */
 }
-.previewActive{
+
+.previewActive {
     transition-duration: 0.7s;
-    transform: rotate(360deg) ;
+    transform: rotate(360deg);
     /* background-color: rgb(2, 196, 255);
     box-shadow: 0 0 20px rgb(4, 195, 253); */
 }
-.list{
+
+.list {
     display: block;
     opacity: 0;
     position: absolute;
@@ -121,31 +179,36 @@
     /* transition: 0.2s; */
     z-index: 1;
     transition-duration: 0.7s;
-    
+
 }
-.Linktext{
+
+.Linktext {
     position: absolute;
     opacity: 0;
     transition-duration: 0.5s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1rem;
+    font-weight: 600;
     left: 16px;
     top: -20px;
-    color: rgb(101, 64, 181);
+    color: rgb(3, 71, 4);
 }
-.LinktextActive{
-    
+
+.LinktextActive {
+
     opacity: 1;
     animation: TextView 0.5s forwards ease-in-out;
 }
-.list:hover{
-    
+
+.list:hover {
+
     background-color: #010610;
-    
+
 
 }
 
 
-.list a{
+.list a {
     position: relative;
     display: flex;
     color: #00aaff;
@@ -157,27 +220,28 @@
     border-radius: 50%;
     transition: 0.7s;
     transition-delay: 0.2s;
-    
+
 }
 
 
-.ViewActive{
+.ViewActive {
     opacity: 1;
     /* display: block; */
     transition-duration: 0.7s;
     transform-origin: center;
-    transform:translateX(-70px) translateY(-70px) rotate(360deg);
+    transform: translateX(-70px) translateY(-70px) rotate(360deg);
     /* animation: animation1 0.7s forwards ease-in-out; */
 }
-.ViewDeActive{
+
+.ViewDeActive {
     opacity: 0;
     display: block;
     transition-duration: 0.7s;
-    transform:translateX(0px) translateY(0px) rotate(0deg);
+    transform: translateX(0px) translateY(0px) rotate(0deg);
     /* animation: animation1R 0.7s  forwards ease-in-out ; */
 }
 
-.GithubActive{
+.GithubActive {
     opacity: 1;
     display: block;
     transition-duration: 0.7s;
@@ -185,87 +249,161 @@
     /* animation: animation2 0.7s forwards ease-in-out; */
 }
 
-.GithubDeActive{
+.GithubDeActive {
     opacity: 0;
     display: block;
     /* animation: animation2R 0.7s forwards ease-in-out; */
     transition-duration: 0.7s;
-    transform:translateX(0px) translateY(0px) rotate(0deg);
+    transform: translateX(0px) translateY(0px) rotate(0deg);
 }
 
 
 
 /* Projects background*/
 
-#prj1{
+#prj1 {
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition-duration: 0.5s;
-    
+
 }
 
-@keyframes animation1{
-    from{
+
+/* flip foreard animations*/
+/* ----------------------------------------------
+ * Generated by Animista on 2023-4-17 22:38:10
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-fwd
+ * ----------------------------------------
+ */
+/* @-webkit-keyframes flip-horizontal-fwd {
+    0% {
+      -webkit-transform: translateZ(0) rotateX(0);
+              transform: translateZ(0) rotateX(0);
+    }
+    100% {
+      -webkit-transform: translateZ(160px) rotateX(-180deg);
+              transform: translateZ(160px) rotateX(-180deg);
+    }
+  } */
+
+@keyframes flip-2-hor-top-1 {
+    0% {
+
+        transform: translateY(0)  rotateX(0);
+        z-index: 0;
+        transform-origin: 50% 0%;
+    }
+
+    100% {
+
+        transform: translateY(-100%)  rotateX(-180deg);
+        z-index: 1;
+        transform-origin: 50% 100%;
+    }
+}
+
+@keyframes flip-2-hor-top-bck {
+    0% {
+
+        z-index: 1;
+        transform: translateY(0)  rotateX(0);
+        transform-origin: 50% 0%;
+    }
+
+    100% {
+
+        z-index: 0;
+        transform: translateY(-100%)  rotateX(180deg);
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+/*Flip animation*/
+
+
+
+
+@keyframes animation1 {
+    from {
         /* left:195px;
         top: 130px; */
-        transform:rotate(0deg) translateX(30px) translateY(30px);
+        transform: rotate(0deg) translateX(30px) translateY(30px);
     }
-    to{
+
+    to {
         top: 40px;
         left: 130px;
-        transform:rotate(360deg) ;
+        transform: rotate(360deg);
     }
 }
 
-@keyframes animation1R{
-    from{
+@keyframes animation1R {
+    from {
         top: 40px;
         left: 130px;
-        transform:rotate(360deg) ;
+        transform: rotate(360deg);
     }
-    to{
-        left:195px;
+
+    to {
+        left: 195px;
         top: 130px;
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
 }
 
-@keyframes animation2{
-    from{
-        left:195px;
+@keyframes animation2 {
+    from {
+        left: 195px;
         top: 130px;
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
-    to{
+
+    to {
         top: 40px;
         left: 260px;
-        transform:rotate(360deg) ;
-    }
-}
-@keyframes animation2R{
-    from{
-        top: 40px;
-        left: 260px;
-        transform:rotate(360deg) ;
-    }
-    to{
-        left:195px;
-        top: 130px;
-        transform:rotate(0deg);
+        transform: rotate(360deg);
     }
 }
 
-@keyframes TextView{
-    from{
+@keyframes animation2R {
+    from {
+        top: 40px;
+        left: 260px;
+        transform: rotate(360deg);
+    }
+
+    to {
+        left: 195px;
+        top: 130px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes TextView {
+    from {
         transform: scale(0);
         transform: translateY(20px);
-        
+
     }
-    to{
-        
-        
+
+    to {
+
+
         transform: scale(1);
         transform: translateY(0px);
     }
@@ -274,27 +412,31 @@
 
 /* where am i  ---->  I Change the size of the links now i am going to find the align top and left property for the links */
 
-@media screen and (max-width: 500px)
-{
-    .PrContainer{
-        
-        grid-template-columns: repeat(
-                auto-fit, minmax(203px, 1fr));
+@media screen and (max-width: 500px) {
+    .PrContainer {
+
+        grid-template-columns: repeat(auto-fit, minmax(203px, 1fr));
     }
-    .projects{
+
+    .projects {
         height: 60vw;
     }
-    .Heading{
+
+    .Heading {
         font-size: 15vw;
     }
-    .text{
+
+    .text {
         font-size: 4vw;
     }
-    .preview{
+
+    .preview {
         height: 20vw;
         width: 20vw;
         font-size: 3vw;
     }
+    .AboutProject{
+        display: none;
+    }
 
 }
-

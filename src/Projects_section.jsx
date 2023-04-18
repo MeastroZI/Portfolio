@@ -43,17 +43,22 @@ function Project() {
 
     //****************Projects Hover Effect***************** */
     function handleHover(e){
-        console.log(e.currentTarget)
-        console.log(e.currentTarget.querySelector('.ProjectsImg'))
+        // console.log(e.currentTarget)
+        // console.log(e.currentTarget.querySelector('.ProjectsImg'))
         document.querySelectorAll(".Projects").forEach((elem)=>{
             DeActiveElm(elem)
         })
         
         e.currentTarget.querySelector(".ProjectsImg").classList.add("projectsActive")
+        e.currentTarget.querySelector(".AboutProject").classList.remove("FlipBackward")
+        e.currentTarget.querySelector(".AboutProject").classList.add("FlipForward")
     }
     //***************projects Leave(Unhover) Effect***********  */
     function handleMouseLeave(e) {
         // console.log(e.target.parentNode)
+        e.currentTarget.querySelector(".AboutProject").classList.add("FlipBackward")
+        e.currentTarget.querySelector(".AboutProject").classList.remove("FlipForward")
+        
         DeActiveElm(e.currentTarget) //call the Deactive function which Deactive All the effect(ViewButton,view, & github effects) under the project on Unhover(leave)
     }
     /***************Deactive Function which Deactive all effect which are under the projects**************  */
@@ -85,6 +90,14 @@ function Project() {
             <span className="text">This is some few resent Projects of mine</span>
             <div className="PrContainer" id='Project'>
                 <div className="projects"     index={1} onMouseLeave={handleMouseLeave} onMouseEnter={handleHover} >
+
+                    <div className="AboutProject">
+                        <p className='AboutProjectText'>
+                        This is a chat website that I have developed using Socket.io, Node.js, and React. Currently, the website does not have a database implemented, so all chats will be erased upon reloading the page , so your privacy is maintain 😆😆 
+                        
+
+                        </p>
+                    </div>
                     <img src={Proj1} className='ProjectsImg' id="prj1" alt="" /> 
                     <div className="preview" onClick={handleClick}>View</div>
 
@@ -96,7 +109,7 @@ function Project() {
                     </li>
                     <li className='list' id='Github' >
                         <span className='Linktext'>Code</span>
-                        <a href="#" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove} target="_blank"><i className="fa-brands fa-github"></i>
+                        <a href="https://github.com/MeastroZI/ChatAPP" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove} target="_blank"><i className="fa-brands fa-github"></i>
                         </a>
 
                     </li>
