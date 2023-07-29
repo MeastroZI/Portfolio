@@ -1,53 +1,55 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
 }
 
-.AboutContainer{
-    
+.AboutContainer {
+
     /* height: 100vh; */
     width: 100%;
     position: relative;
     margin: 70px 0;
     z-index: 2;
-    
+
 }
 
-.Before_Design{
+.Before_Design {
     position: absolute;
     /* display: block; */
     font-size: 22rem;
-    font-weight:bold;
+    font-weight: bold;
     width: 100%;
     z-index: 0;
     color: rgb(0 0 0 / 5%);
-    cursor:default;
+    cursor: default;
 }
 
-#MeB{
+#MeB {
     text-align: right;
     bottom: 0;
     /* text-align: ; */
     /* position: absolute; */
 
 }
-#AboutB{
-   text-align: left;
-   top: 0;
+
+#AboutB {
+    text-align: left;
+    top: 0;
 }
-.AboutHeading{
+
+.AboutHeading {
     display: block;
     text-align: center;
     position: relative;
     font-size: 4.5rem;
     font-family: 'Kanit';
     color: #71ff32;
-  
-    
+
+
 }
 
-.BoxContainer{
+.BoxContainer {
     display: flex;
     flex-direction: column;
     /* flex-direction: row; */
@@ -59,8 +61,8 @@
 }
 
 
-.aboutText{
-    
+.aboutText {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,84 +75,98 @@
     letter-spacing: 0.17rem;
 }
 
-.text1{
-    
+.text1 {
+
     float: left;
 }
 
-.Skilleffect{
+.Skilleffect {
 
     width: 50%;
     text-align: center;
     margin-top: 50px;
-    
+
 }
-.effectContainer{
+
+.effectContainer {
     height: 60%;
     width: 80%;
     margin: 140px auto;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    
+    justify-content: center;
+
 }
+
 /* .effectContainer li{
     scale: 0;
 } */
 
 
-.center{
+.center {
     font-size: 7rem;
     color: #4e6796;
 }
-.AboutSkills{
+
+.AboutSkills {
     position: absolute;
     list-style: none;
-    
+
     font-size: 3.3rem;
     /* transform-origin: -200px; */
-    transition-duration: 1s; 
+    transition-duration: 1s;
     transition-delay: 0.2s;
-    transition-timing-function: ease-in-out; 
-    
+    transition-timing-function: ease-in-out;
+
 }
 
-:root{
-    --iconDist : 150px;
+:root {
+    --iconDist: 180px;
+    --iconAngle: 72;
 }
 
-.html{
+.html {
     /* transform: rotate(0deg) scale(1); */
-    transform: translate(var(--iconDist), var(--iconDist));
-    
+    /* transform: translate(calc(var(--iconDist)*sin(72deg)), calc(var(--iconDist)*cos(72deg))); */
+    transform: translate(calc(var(--iconDist) * sin(calc(var(--iconAngle) * 1deg))),
+            calc(var(--iconDist) * cos(calc(var(--iconAngle) * 1deg))));
+
 }
 
-.css{
-    
+.css {
+
     /* transform: rotate(-60deg) scale(1); */
-    transform: translate(calc(var(--iconDist)*-1),var(--iconDist));
-    
-}
-.js{
-    
-    /* transform: rotate(-120deg) scale(1); */
-    transform: translate(var(--iconDist),calc(var(--iconDist)*-1));
-    
-}
-.react{
-    /* transform: rotate(-180deg) scale(1); */
-    transform: translate(calc(var(--iconDist)*-1),calc(var(--iconDist)*-1));
-    
-    
+    transform: translate(calc(var(--iconDist) * sin(calc(var(--iconAngle) * 2deg))),
+            calc(var(--iconDist) * cos(calc(var(--iconAngle) * 2deg))));
+
 }
 
-.InVisiable{
+.js {
+
+    /* transform: rotate(-120deg) scale(1); */
+    transform: translate(calc(var(--iconDist) * sin(calc(var(--iconAngle) * 3deg))),
+            calc(var(--iconDist) * cos(calc(var(--iconAngle) * 3deg))));
+
+}
+
+.react {
+    /* transform: rotate(-180deg) scale(1); */
+    transform: translate(calc(var(--iconDist) * sin(calc(var(--iconAngle) * 4deg))),
+            calc(var(--iconDist) * cos(calc(var(--iconAngle) * 4deg))));
+}
+
+.node {
+    transform: translate(calc(var(--iconDist) * sin(calc(var(--iconAngle) * 5deg))),
+            calc(var(--iconDist) * cos(calc(var(--iconAngle) * 5deg))));
+}
+
+.InVisiable {
     /* transform:translateY(100px); */
-    transform: translate(0 ,0) scale(0) rotate(360deg);
+    transform: translate(0, 0) scale(0) rotate(360deg);
     /* color: red; */
 }
 
-.AbtText{
+.AbtText {
     opacity: 0;
     transition-duration: 1s;
     transition-delay: 0.2s;
@@ -161,55 +177,61 @@
 
 
 }
-.AbtText img{
+
+.AbtText img {
     height: 35rem;
     float: left;
     margin: 0 30px;
 }
 
-.Visiable{
+.Visiable {
     opacity: 1;
     transform: translateX(0) translateY(0);
 }
 
 
 
-@media screen and (max-width: 530px){
-    :root{
-        --iconDist:25vw;
+@media screen and (max-width: 530px) {
+    :root {
+        --iconDist: 25vw;
     }
-    .AboutHeading{
+
+    .AboutHeading {
         font-size: 15vw;
     }
-    .AboutSkills{
+
+    .AboutSkills {
         font-size: 10vw;
     }
-    .center{
+
+    .center {
         font-size: 20vw;
     }
 
-    .AbtText img{
+    .AbtText img {
         display: block;
         float: none;
         margin: 30px auto;
         height: 79vw;
-       
+
     }
 }
 
-@media screen and (max-width: 1070px) and (min-width:530px){
-    
-    .Before_Design{
+@media screen and (max-width: 1070px) and (min-width:530px) {
+
+    .Before_Design {
         font-size: 33vw;
         text-align: center;
     }
-    #MeB{
-        
+
+    #MeB {
+
         text-align: center;
     }
-    .AbtText img{
+
+    .AbtText img {
         height: 55vw;
-       
+
     }
-    
+
 }
