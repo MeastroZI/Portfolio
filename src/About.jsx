@@ -48,7 +48,7 @@ function About() {
 
                     <span className="text AbtText"  >
                         {/* <img src={img} alt="" /> */}
-                        Hello, I'm Vinit Sharma and I'm a self-taught frontend web developer. I am passionate about learning new technologies of the computer world to make the internet world more beautiful.  Currently I am the Computer science student in Parul university Vadodara Gujarat. I spend the majority of my remaining time  in VS-Code , playing games , searching queries on google reading documentation  or watching videos on youtube
+                        Hello, I'm Vinit Sharma and I'm a self-taught full stack developer. I am passionate about learning new technologies of the computer world to make the internet world more beautiful.  Currently I am the Computer science student in Parul university Vadodara Gujarat. I spend the majority of my remaining time  in VS-Code , searching queries on google reading documentation  or watching videos on youtube
                     </span>
 
 
