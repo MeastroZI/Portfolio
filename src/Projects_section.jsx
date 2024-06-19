@@ -103,7 +103,7 @@ function Project() {
 
                     <li className='list'id='View' >
                         <span className='Linktext'> Site</span>
-                        <a href="https://chata.netlify.app" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove} target="_blank"><i className="fa-solid fa-eye"></i>
+                        <a href="#" onMouseEnter={handleTextView} onMouseLeave={handleTextRemove} target="_blank"><i className="fa-solid fa-eye"></i>
                         </a>
 
                     </li>
