@@ -43,7 +43,7 @@
     /* border: 2px solid red; */
     margin-top: 20px;
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: repeat(2,320px);
+    grid-template-rows: repeat(1,320px);
     /* column-gap: 100px; */
     gap: 30px;
     /* margin: 0 50px; */

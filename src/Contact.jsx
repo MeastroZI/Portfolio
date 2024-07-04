@@ -160,9 +160,6 @@ function Contact(){
                 </ul>
             </form>
             
-       
-
-            <iframe className='Map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1305.0004446456844!2d73.12462163693142!3d22.312093945532233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4880fa5cbc9d47ad!2sSomnaath%20Heritage!5e0!3m2!1sen!2sin!4v1669988109445!5m2!1sen!2sin" width="700" height="600" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             
             <div className="errorMsg">
 

@@ -47,7 +47,10 @@
 
 .formCont {
     position: relative;
-
+    /* justify-content: center; */
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
 
 
@@ -57,7 +60,7 @@
     position: relative;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(2, minmax(100px,270px));
+    grid-template-columns: repeat(2, minmax(100px, 270px));
     margin: 0 32px;
     list-style: none;
     gap: 19px;
@@ -69,7 +72,7 @@
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     transition-delay: 0.2s;
- 
+
     z-index: 50;
 
     display: block;
@@ -126,7 +129,7 @@
     font-size: 1rem;
     letter-spacing: 0.07rem;
 
-    
+
 
 
 }
@@ -270,17 +273,19 @@ input::placeholder {
     transform: translateY(20px);
 }
 
-.follow_me{
+.follow_me {
     font-size: 2rem;
 
     grid-column: span 2;
     height: 70px;
 }
-.follow_me a{
+
+.follow_me a {
     padding: 10px;
     color: #d4bc7c99;
 }
-.errorMsg{
+
+.errorMsg {
     height: 67px;
     display: flex;
     align-items: center;
@@ -291,37 +296,40 @@ input::placeholder {
     /* text-align: center; */
     right: 0;
     color: rgb(0, 0, 0);
-    transition-duration: 0.5s ;
+    transition-duration: 0.5s;
     z-index: 71;
     font-family: "Sarabun";
     transform: translateX(300px);
-    
+
 
 }
 
 
-@media screen and (max-width: 500px){
-    #name{
+@media screen and (max-width: 500px) {
+    #name {
         grid-column: span 2
-
     }
-    #Submit button{
+
+    #Submit button {
         width: 60vw;
         /* height: 2.5rem; */
     }
+
     .heading {
         font-size: 15vw;
     }
-    #Number{
+
+    #Number {
         grid-column: span 2;
     }
 }
 
-@media screen and (max-width: 1000px){
-    .Container{
+@media screen and (max-width: 1000px) {
+    .Container {
         /* background-color: red; */
         flex-direction: column;
     }
+
     .Map {
         width: 100vw;
     }
