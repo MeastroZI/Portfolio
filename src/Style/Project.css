@@ -42,8 +42,8 @@
     width: 100%;
     /* border: 2px solid red; */
     margin-top: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    /* grid-template-rows: repeat(2,320px); */
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: repeat(2,320px);
     /* column-gap: 100px; */
     gap: 30px;
     /* margin: 0 50px; */
@@ -76,12 +76,10 @@
 }
 
 .AboutProject {
-
-
     height: 63%;
-    width: 80%;
+    width: 100%;
     /* filter: blur(1px); */
-    background-color: rgba(107, 107, 107, 0.238);
+    background-color: rgb(107 107 107 / 54%);
     border-radius: 7px;
     position: absolute;
     opacity: 0;
@@ -89,9 +87,7 @@
     color: rgb(255, 255, 255);
     animation-duration: 0.5s;
     letter-spacing: 0.05rem;
-    box-shadow: 0 0 10px rgb(255 255 255);
-    /* opacity: 1;
-    z-index: 55; */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.703);
 }
 
 /* .AboutProject:hover{
@@ -261,7 +257,7 @@
 
 /* Projects background*/
 
-#prj1 {
+.ProjectsImg{
     position: absolute;
     height: 100%;
     width: 100%;
