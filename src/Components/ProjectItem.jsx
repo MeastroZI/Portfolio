@@ -64,7 +64,7 @@ export default function ProjectItem({ description , View , Github , image}) {
                     {description}
                 </p>
             </div>
-            <img src={'src/img/'+image} className='ProjectsImg'  alt="" />
+            <img src={'img/'+image} className='ProjectsImg'  alt="" />
             <div className="preview" onClick={handleClick}>View</div>
 
             <li className='list' id='View' >
